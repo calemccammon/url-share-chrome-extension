@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	
+	"name":	"URL Share",
+	"description":	"This extension will share a link via email.",
+	"version":	"1.0",
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+	],
+	"js": ["jquery-1.11.3.min.js"]
+	}
+	],
+	"browser_action": {
+	"default_icon": "icon-16.png"
+	},
+	"icons": { "16": "icon-16.png",
+			"48": "icon-48.png",
+			"128": "icon-128.png"
+},
+	
+	"background": {
+    "scripts": ["background.js"]
+  },
+	"permissions":[
+	"tabs",
+	"activeTab"]
+
+}
