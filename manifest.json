@@ -4,12 +4,13 @@
 	"name":	"URL Share",
 	"description":	"This extension will share a link via email.",
 	"version":	"1.0",
+	"options_page": "options.html",
 	"content_scripts": [
 		{
 			"matches": [
 				"<all_urls>"
 	],
-	"js": ["jquery-1.11.3.min.js"]
+	"js": ["jquery-1.11.3.min.js", "options.js"]
 	}
 	],
 	"browser_action": {
@@ -24,6 +25,7 @@
     "scripts": ["background.js"]
   },
 	"permissions":[
+	"storage",
 	"tabs",
 	"activeTab"]
 
